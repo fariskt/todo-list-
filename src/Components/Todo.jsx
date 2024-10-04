@@ -19,15 +19,10 @@ function Todo() {
     setTodo(removeTask);
   };
 
-  const enterHandle = (event) => {
-    if (event.key === "Enter") {
-      addTask();
-    }
-  };
 
   return (
     <>
-      <h2 className="add-task" onClick={focusInp}>
+      <h2 className="add-task">
         Add Task
       </h2>
       <div className="form-container">
@@ -37,7 +32,6 @@ function Todo() {
           value={inpVal}
           className="inp"
           onChange={(e) => setInpVal(e.target.value)}
-          onKeyDown={enterHandle}
         />
         <Button className="primary p-3" onClick={addTask}>
           Add task
